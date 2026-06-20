@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.custom-shadow{
+    transition: 0.3s;
+    box-shadow: 0px 0px 3px 3px rgba(78, 149, 207, 0.1);
+}
+
+.custom-form-hover:hover{
+    box-shadow: 0px 0px 3px 3px rgba(80, 161, 228, 0.2);
+}
