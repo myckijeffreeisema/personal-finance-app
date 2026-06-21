@@ -16,18 +16,16 @@ function getTransactionId(req: express.Request): string {
   return id;
 }
 
-
 // Extrai o parâmetro de tipo da requisição
 function getTransactionType(req: express.Request): TransactionType | null {
   const type = req.query.type as string | undefined;
-  if (!type) return null;
+  if (!type || type === "all") return null;
   const typeArgs = ["entry", "exit"];
   if (typeArgs.includes(type)) {
     return type as TransactionType;
   }
   throw new APIError(TRANSACTION_RESPONSE_CODE.ERROR.INVALID_PARAMS_TYPE, 400);
 }
-
 
 // Extrai o parâmetro de ordenação da requisição
 function getTransactionOrder(req: express.Request): TransactionOrder | null {
@@ -48,13 +46,13 @@ function getTransactionListParams(req: express.Request) {
   const parsedPage = queryPage ? Number(queryPage) : 1;
   const parsedSize = querySize ? Number(querySize) : 10;
 
-  let page = Number.isInteger(parsedPage) && parsedPage > 0 ? parsedPage : 1; 
-  let size = Number.isInteger(parsedSize) && parsedSize > 0 ? parsedSize : 10; 
+  let page = Number.isInteger(parsedPage) && parsedPage > 0 ? parsedPage : 1;
+  let size = Number.isInteger(parsedSize) && parsedSize > 0 ? parsedSize : 10;
 
   if (size > 100) {
     size = 100;
   }
-  return { page, size};
+  return { page, size };
 }
 
 export const makeTransactionController = (
@@ -154,9 +152,9 @@ export const makeTransactionController = (
 
     /**
      * Busca a soma total de valores de entradas e saídas de transações
-     * @param req 
-     * @param res 
-     * @returns 
+     * @param req
+     * @param res
+     * @returns
      */
     async getBalances(req: express.Request, res: express.Response) {
       const { userId } = req.tokenPayload;
