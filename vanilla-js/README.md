@@ -73,10 +73,10 @@ O projeto segue uma separação clara de responsabilidades:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/myckijeffreeisema/my-wallet-v1.git
+git clone https://github.com/myckijeffreeisema/personal-finance-app
 
 # Acesse a pasta
-cd my-wallet-v1
+cd /personal-finance-app/vanilla-js
 
 # Abra o index.html no navegador ou use a extensão Live
 ```
