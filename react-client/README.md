@@ -46,11 +46,11 @@ src/
 
 # Clone o repositório
 
-git clone https://github.com/myckijeffreeisema/my-wallet-v3.git
+git clone https://github.com/myckijeffreeisema/personal-finance-app.git
 
 
 # Acesse a pasta do projeto
-cd my-wallet-v3
+cd /personal-finance-app/react-client
 
 
 # Instale as dependências
