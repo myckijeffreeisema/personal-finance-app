@@ -73,7 +73,7 @@ O projeto segue uma separação clara de responsabilidades:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/myckijeffreeisema/personal-finance-app
+git clone https://github.com/myckijeffreeisema/personal-finance-app.git
 
 # Acesse a pasta
 cd /personal-finance-app/vanilla-js
