@@ -24,7 +24,7 @@ Escolha uma das opções abaixo para obter o código:
 npx degit myckijeffreeisema/personal-finance-app/express-api nome-da-sua-pasta
 
 # Opção B: Clonar o repositório inteiro
-git clone [https://github.com/myckijeffreeisema/personal-finance-app.git](https://github.com/myckijeffreeisema/personal-finance-app.git)
+git clone https://github.com/myckijeffreeisema/personal-finance-app.git
 
 ```
 
